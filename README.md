@@ -6,7 +6,7 @@ Log4j2-based libraries often have a `Log4j2Plugins.dat` file, containing a cache
 formatting plugins. If you build an uberjar containing more then one of these files,
 you need this conflict handler in order to merge those files correctly.
 
-> Note: requires a version of `tools.build` that supports `:conflict-handlers`!
+> Note: requires at least version v0.4.0 of `tools.build` (that supports `:conflict-handlers`).
 
 ## usage
 
