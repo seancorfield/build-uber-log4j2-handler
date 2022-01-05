@@ -31,5 +31,5 @@
     nil))
 
 (def log4j2-conflict-handler
-  {#"^META-INF/org/apache/logging/log4j/core/config/plugins/Log4j2Plugins.dat$"
+  {"^META-INF/org/apache/logging/log4j/core/config/plugins/Log4j2Plugins.dat$"
    log4j2-plugin-merger})
