@@ -13,7 +13,7 @@ you need this conflict handler in order to merge those files correctly.
 Add the following dependency to your `:build` alias:
 
 ```clojure
-  io.github.seancorfield/build-uber-log4j2-handler {:git/tag "v0.1.4" :git/sha "08b532e"}
+  io.github.seancorfield/build-uber-log4j2-handler {:git/tag "v0.1.5" :git/sha "55fb6f6"}
 ```
 
 In your `build.clj` script, require the handler:
