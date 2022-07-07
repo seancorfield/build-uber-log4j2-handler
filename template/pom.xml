@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>build-uber-log4j2-handler</name>
+  <description>A conflict handler for log4j2 plugins cache files for the tools.build uber task.</description>
+  <url>https://github.com/seancorfield/build-uber-log4j2-handler</url>
+  <scm>
+    <url>https://github.com/seancorfield/build-uber-log4j2-handler</url>
+    <connection>scm:git:git://github.com/seancorfield/build-uber-log4j2-handler.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/seancorfield/build-uber-log4j2-handler.git</developerConnection>
+  </scm>
+</project>

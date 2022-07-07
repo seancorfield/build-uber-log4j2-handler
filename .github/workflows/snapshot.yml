@@ -1,0 +1,63 @@
+name: Snapshot
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build-and-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: Setup Clojure
+        uses: DeLaGuardo/setup-clojure@master
+        with:
+          cli: '1.10.3.1053'
+      - name: Cache All The Things
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.m2/repository
+            ~/.gitlibs
+            ~/.clojure
+            ~/.cpcache
+          key: ${{ runner.os }}-${{ hashFiles('**/deps.edn') }}
+      - name: Build Jar
+        run: clojure -T:build jar :snapshot true
+      - name: Deploy Snapshot
+        run: clojure -T:build deploy :snapshot true
+        env:
+          CLOJARS_PASSWORD: ${{secrets.DEPLOY_TOKEN}}
+          CLOJARS_USERNAME: ${{secrets.DEPLOY_USERNAME}}
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ '8', '14', '17' ]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: ${{ matrix.java }}
+      - name: Clojure CLI
+        uses: DeLaGuardo/setup-clojure@master
+        with:
+          cli: '1.10.3.1053'
+      - name: Cache All The Things
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.m2/repository
+            ~/.gitlibs
+            ~/.clojure
+            ~/.cpcache
+          key: ${{ runner.os }}-${{ hashFiles('**/deps.edn') }}
+      - name: Build jar
+        run: clojure -T:build jar
