@@ -1,4 +1,4 @@
-;; copyright (c) 2021 sean corfield, all rights reserved
+;; copyright (c) 2021-2023 sean corfield, all rights reserved
 
 (ns org.corfield.log4j2-conflict-handler
   "Provides a conflict handler for use with tools.build.
@@ -6,7 +6,7 @@
   (ns build
     (:require [clojure.tools.build.api :as b]
               [org.corfield.log4j2-conflict-handler
-               :refer [log4j2-conflict-handler]])
+               :refer [log4j2-conflict-handler]]))
 
   (b/uber {... :conflict-handlers log4j2-conflict-handler ...})"
   (:require [clojure.java.io :as io])

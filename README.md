@@ -6,15 +6,17 @@ Log4j2-based libraries often have a `Log4j2Plugins.dat` file, containing a cache
 formatting plugins. If you build an uberjar containing more then one of these files,
 you need this conflict handler in order to merge those files correctly.
 
-> Note: requires at least version v0.4.0 of `tools.build` (that supports `:conflict-handlers`). If you use the `uber` task of the [build-clj](https://github.com/seancorfield/build-clj) wrapper for `tools.build`, this log4j2 conflict handler is provided automatically.
+> Note: requires at least version v0.4.0 of `tools.build` (that supports `:conflict-handlers`).
 
 ## usage
 
 Add the following dependency to your `:build` alias:
 
 ```clojure
-  io.github.seancorfield/build-uber-log4j2-handler {:git/tag "v0.1.5" :git/sha "55fb6f6"}
+  io.github.seancorfield/build-uber-log4j2-handler {:git/tag "v2.19.0" :git/sha "..."}
 ```
+
+> Note: as of v2.19.0 the tag is intended to reflect the version of `log4j2` that is used.
 
 In your `build.clj` script, require the handler:
 
@@ -22,7 +24,7 @@ In your `build.clj` script, require the handler:
 (ns build
   (:require [clojure.tools.build.api :as b]
             [org.corfield.log4j2-conflict-handler
-              :refer [log4j2-conflict-handler]])
+              :refer [log4j2-conflict-handler]]))
 ```
 
 and then pass it to the `tools.build` `uber` task:
@@ -33,6 +35,6 @@ and then pass it to the `tools.build` `uber` task:
 
 ## license
 
-Copyright © 2021 Sean Corfield
+Copyright © 2021-2023 Sean Corfield
 
 Distributed under the Apache Software License version 2.0.
