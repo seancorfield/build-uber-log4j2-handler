@@ -1,6 +1,7 @@
 # build-uber-log4j2-handler
 
-A conflict handler for log4j2 plugins cache files for the `uber` task of `tools.build`.
+A conflict handler for log4j2 plugins cache files for the `uber` task of
+[`tools.build`](https://github.com/clojure/tools.build).
 
 Log4j2-based libraries often have a `Log4j2Plugins.dat` file, containing a cache of
 formatting plugins. If you build an uberjar containing more then one of these files,
