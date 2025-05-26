@@ -1,4 +1,4 @@
-;; copyright (c) 2021-2023 sean corfield, all rights reserved
+;; copyright (c) 2021-2025 sean corfield, all rights reserved
 
 (ns org.corfield.log4j2-conflict-handler
   "Provides a conflict handler for use with tools.build.

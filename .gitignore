@@ -1,7 +1,4 @@
-*.class
-*.jar
-*.swp
-*~
+.calva/mcp-server/port
 .calva/output-window/
 .calva/repl.calva-repl
 .classpath
@@ -24,6 +21,10 @@
 .socket-repl-port
 .sw*
 .vscode
+*.class
+*.jar
+*.swp
+*~
 /checkouts
 /classes
 /target

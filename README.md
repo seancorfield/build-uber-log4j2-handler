@@ -36,6 +36,6 @@ and then pass it to the `tools.build` `uber` task:
 
 ## license
 
-Copyright © 2021-2024 Sean Corfield
+Copyright © 2021-2025 Sean Corfield
 
 Distributed under the Apache Software License version 2.0.
