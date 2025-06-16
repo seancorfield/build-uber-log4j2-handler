@@ -14,7 +14,7 @@ you need this conflict handler in order to merge those files correctly.
 Add the following dependency to your `:build` alias:
 
 ```clojure
-  io.github.seancorfield/build-uber-log4j2-handler {:git/tag "v2.24.3" :git/sha "e0d0878"}
+  io.github.seancorfield/build-uber-log4j2-handler {:git/tag "v2.25.0" :git/sha "9bceba9"}
 ```
 
 > Note: as of v2.19.0 the tag is intended to reflect the version of `log4j2` that is used.
