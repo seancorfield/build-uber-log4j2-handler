@@ -1,1 +1,1 @@
-{:deps {org.apache.logging.log4j/log4j-core {:mvn/version "2.25.2"}}}
+{:deps {org.apache.logging.log4j/log4j-core {:mvn/version "2.25.3"}}}
